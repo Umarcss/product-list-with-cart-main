@@ -71,6 +71,7 @@ p {
   .main-content {
     flex-direction: row;
     gap: 3rem;
+    align-items: flex-start;
   }
 }
 
@@ -78,7 +79,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1.5rem;
-  width: 100%;
+  flex: 1;
 }
 
 @media (min-width: 768px) {
@@ -98,6 +99,14 @@ p {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cart-summary {
+    flex: 0 0 380px;
+  }
 }
 
 /* Product Card */
@@ -210,6 +219,7 @@ p {
 .cart-summary h2 {
   margin-top: 0;
   margin-bottom: 1.5rem;
+  color: var(--red);
 }
 
 .cart-item {

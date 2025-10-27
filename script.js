@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const startNewOrderButton = document.querySelector('.start-new-order-button');
   const modalTotalPrice = document.getElementById('modal-total-price');
   const modalOrderSummary = document.querySelector('.order-summary');
+  const orderTotalEl = document.querySelector('.order-total');
+  const carbonNeutralEl = document.querySelector('.carbon-neutral-delivery');
 
   let cart = [];
 
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       renderProducts(data);
+      updateCart();
     });
 
   function renderProducts(products) {
@@ -120,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCartItems();
     updateCartTotals();
     updateProductCardStates();
+    toggleOrderSummaryVisibility();
   }
   
   function renderCartItems() {
@@ -212,5 +216,17 @@ document.addEventListener('DOMContentLoaded', () => {
     cart = [];
     updateCart();
     orderConfirmationModal.style.display = 'none';
+  }
+
+  function toggleOrderSummaryVisibility() {
+    if (cart.length === 0) {
+      orderTotalEl.style.display = 'none';
+      carbonNeutralEl.style.display = 'none';
+      confirmOrderButton.style.display = 'none';
+    } else {
+      orderTotalEl.style.display = 'flex';
+      carbonNeutralEl.style.display = 'flex';
+      confirmOrderButton.style.display = 'inline-flex';
+    }
   }
 });
