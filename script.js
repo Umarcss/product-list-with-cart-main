@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalOrderSummary.innerHTML = '';
     cart.forEach(item => {
         const orderItem = document.createElement('div');
-        orderItem.classList.add('cart-item'); // Reuse cart-item styling
+        orderItem.classList.add('modal-order-item');
         orderItem.innerHTML = `
           <div class="item-details">
             <img src="${item.image.thumbnail}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 4px; margin-right: 1rem;">
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
           </div>
-          <span class="item-total-price" style="font-weight: 700;">$${(item.quantity * item.price).toFixed(2)}</span>
+          <span class="item-total-price">$${(item.quantity * item.price).toFixed(2)}</span>
         `;
         modalOrderSummary.appendChild(orderItem);
     });

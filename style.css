@@ -371,28 +371,62 @@ p {
 
 .modal-content {
   background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 400px;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 520px;
   width: 90%;
 }
 
 .confirmation-icon {
   width: 48px;
   height: 48px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .modal-content h2 {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.5rem;
+}
+
+.modal-subtext {
+  color: var(--rose-500);
+  margin-bottom: 2rem;
 }
 
 .order-summary {
   background-color: var(--rose-50);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 0;
+}
+
+.modal-order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--rose-100);
+}
+
+.modal-order-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.modal-order-item .item-details {
+  display: flex;
+  align-items: center;
+}
+
+.modal-order-item .item-total-price {
+  font-weight: var(--font-weight-bold);
+  color: var(--rose-900);
 }
 
 .order-total-summary {
@@ -400,6 +434,11 @@ p {
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-weight-bold);
+  background-color: var(--rose-50);
+  padding: 1.5rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 2rem;
 }
 
 .start-new-order-button {
