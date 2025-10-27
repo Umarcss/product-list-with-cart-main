@@ -37,19 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${product.image.mobile}" alt="${product.name}" class="product-thumbnail">
           </picture>
         </div>
+        <div class="product-actions">
+            <button class="add-to-cart-button">
+                <img src="./assets/images/icon-add-to-cart.svg" alt="Add to cart icon">
+                Add to Cart
+            </button>
+            <div class="quantity-selector" style="display: none;">
+                <button class="decrement-quantity"><img src="./assets/images/icon-decrement-quantity.svg" alt="Decrement quantity"></button>
+                <span class="quantity">1</span>
+                <button class="increment-quantity"><img src="./assets/images/icon-increment-quantity.svg" alt="Increment quantity"></button>
+            </div>
+        </div>
         <div class="product-details">
           <p class="product-category">${product.category}</p>
           <h3 class="product-name">${product.name}</h3>
           <p class="product-price">$${product.price.toFixed(2)}</p>
-          <button class="add-to-cart-button">
-            <img src="./assets/images/icon-add-to-cart.svg" alt="Add to cart icon">
-            Add to Cart
-          </button>
-          <div class="quantity-selector" style="display: none;">
-            <button class="decrement-quantity"><img src="./assets/images/icon-decrement-quantity.svg" alt="Decrement quantity"></button>
-            <span class="quantity">1</span>
-            <button class="increment-quantity"><img src="./assets/images/icon-increment-quantity.svg" alt="Increment quantity"></button>
-          </div>
         </div>
       `;
       productList.appendChild(productCard);
@@ -175,10 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const quantitySpan = card.querySelector('.quantity');
 
       if (itemInCart) {
+        card.classList.add('selected');
         addToCartBtn.style.display = 'none';
         quantitySelector.style.display = 'flex';
         quantitySpan.textContent = itemInCart.quantity;
       } else {
+        card.classList.remove('selected');
         addToCartBtn.style.display = 'inline-flex';
         quantitySelector.style.display = 'none';
       }
