@@ -106,7 +106,7 @@ p {
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--rose-100);
 }
 
 .product-image img {
@@ -138,7 +138,7 @@ p {
 }
 
 .add-to-cart-button {
-  background-color: var(--rose-100);
+  background-color: #fff;
   border: 1px solid var(--rose-300);
   color: var(--rose-900);
   padding: 0.75rem 1.5rem;
@@ -153,7 +153,16 @@ p {
 }
 
 .add-to-cart-button:hover {
-  background-color: var(--rose-300);
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.add-to-cart-button:active,
+.add-to-cart-button:focus {
+  color: var(--red);
+  border-color: var(--red);
+  outline: none;
+  background-color: var(--rose-50);
 }
 
 .add-to-cart-button img {
