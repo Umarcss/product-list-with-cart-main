@@ -287,6 +287,22 @@ p {
   font-size: 1.5rem;
 }
 
+.carbon-neutral-delivery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--rose-50);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.carbon-neutral-delivery p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
 .confirm-order-button {
   background-color: var(--red);
   color: white;
@@ -298,17 +314,12 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   font-weight: var(--font-weight-semibold);
   transition: background-color 0.3s ease;
 }
 
 .confirm-order-button:hover {
   background-color: hsl(14, 86%, 32%);
-}
-
-.confirm-order-button img {
-  filter: brightness(0) invert(1);
 }
 
 /* Order Confirmation Modal */
