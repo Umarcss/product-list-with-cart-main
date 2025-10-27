@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./preview.jpg)
+![](./assets/images/preview.jpg)
 
 ## My Process
 
