@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartItemsContainer = document.querySelector('.cart-items-container');
   const cartQuantity = document.getElementById('cart-quantity');
   const totalPriceEl = document.getElementById('total-price');
-  const emptyCartMessage = document.querySelector('.empty-cart-message');
   const confirmOrderButton = document.querySelector('.confirm-order-button');
   const orderConfirmationModal = document.querySelector('.order-confirmation-modal');
   const startNewOrderButton = document.querySelector('.start-new-order-button');

@@ -280,7 +280,7 @@ p {
 }
 
 .item-total-price {
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   color: var(--rose-500);
 }
 
@@ -498,6 +498,9 @@ p {
 .attribution a:hover {
   text-decoration: underline;
 }
+
+
+/* mobile screen  */
 
 @media (max-width: 767px) {
   h1 {
